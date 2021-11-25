@@ -29,10 +29,12 @@ exports.list = async (req, res) => {
                     }
                 }]);
 
+        
         const tasterCountSummary = tasterCountSummaryRef.map(t => ({ name: t._id, total: t.total }));
         res.render("index", { tasterCountSummary: tasterCountSummary, totalTastings: totalTastings, totalTasters: tasterCountSummary.length, totalCountries: totalCountries[0].total });
 
     } catch (e) {
+        console.log(e);
         res.status(404).send({
             message: `error rendering page`,
         });

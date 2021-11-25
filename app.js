@@ -109,9 +109,9 @@ app.get("/login", (req, res) => {
 app.post("/login", userController.login);
 
 
-app.listen(WEB_PORT, () => {
+app.listen(PORT, () => {
   console.log(
-    `Example app listening at http://localhost:${WEB_PORT}`,
+    `Example app listening at http://localhost:${PORT}`,
     chalk.green("✓")
   );
 });
